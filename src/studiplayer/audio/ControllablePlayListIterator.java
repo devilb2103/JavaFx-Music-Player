@@ -1,7 +1,6 @@
 package studiplayer.audio;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
@@ -62,15 +61,15 @@ public class ControllablePlayListIterator implements Iterator<AudioFile> {
     }
 
 	 // returns iterator'th file and increments iterator position
-	 public AudioFile next() {
-	    if(hasNext()) {
-	    	iterator += 1;
-	        return files.get(this.iterator - 1);
-	    }
-	    else {
-	    	iterator = 0;
-	        return files.get(this.iterator++);
-	    }
+    public AudioFile next() {
+        if(hasNext()) {
+            iterator += 1;
+            return files.get(this.iterator - 1);
+        }
+        else {
+            iterator = 0;
+            return files.get(this.iterator++);
+        }
 	}
 
 	
